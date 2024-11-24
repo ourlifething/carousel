@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+    <title>CSSのみでカルーセル漫画</title>
+  </head>
+  <body>
+    <div class="carousel">
+      <!-- ラジオボタン -->
+      <input type="radio" name="carousel" id="page1" />
+      <input type="radio" name="carousel" id="page2" checked">
+      <input type="radio" name="carousel" id="page3" />
+      <input type="radio" name="carousel" id="page4" />
+      <input type="radio" name="carousel" id="page5" />
+      <input type="radio" name="carousel" id="page6" />
+
+      <!-- コンテンツ -->
+      <div class="carousel-content">
+        <div class="page">
+          <img
+            src="https://placehold.jp/350x500.png"
+            alt="Page 6"
+            loading="lazy"
+          />6
+        </div>
+        <div class="page">
+          <img
+            src="https://placehold.jp/350x500.png"
+            alt="Page 5"
+            loading="lazy"
+          />5
+        </div>
+        <div class="page">
+          <img
+            src="https://placehold.jp/350x500.png"
+            alt="Page 4"
+            loading="lazy"
+          />4
+        </div>
+        <div class="page">
+          <img
+            src="https://placehold.jp/350x500.png"
+            alt="Page 3"
+            loading="lazy"
+          />3
+        </div>
+        <div class="page">
+          <img
+            src="https://placehold.jp/350x500.png"
+            alt="Page 2"
+            loading="lazy"
+          />2
+        </div>
+        <div class="page">
+          <img
+            src="https://placehold.jp/350x500.png"
+            alt="Page 1"
+            loading="lazy"
+          />1
+        </div>
+      </div>
+
+      <!-- ナビゲーションボタン -->
+      <div class="prev-next">
+        <label for="page6" class="prev" id="prev1">&lt;</label>
+        <!-- <label for="page2" class="next" id="next1">&gt;</label> -->
+
+        <label for="page1" class="prev" id="prev2">&lt;</label>
+        <!-- <label for="page3" class="next" id="next2">&gt;</label> -->
+
+        <label for="page2" class="prev" id="prev3">&lt;</label>
+        <!-- <label for="page4" class="next" id="next3">&gt;</label> -->
+
+        <label for="page3" class="prev" id="prev4">&lt;</label>
+        <!-- <label for="page5" class="next" id="next4">&gt;</label> -->
+
+        <label for="page4" class="prev" id="prev5">&lt;</label>
+        <!-- <label for="page6" class="next" id="next5">&gt;</label> -->
+
+        <label for="page5" class="prev" id="prev6">&lt;</label>
+        <!-- <label for="page1" class="next" id="next6">&gt;</label> -->
+      </div>
+
+      <!-- ドット -->
+      <div class="dots">
+        <label for="page1" class="dot"></label>
+        <label for="page2" class="dot"></label>
+        <label for="page3" class="dot"></label>
+        <label for="page4" class="dot"></label>
+        <label for="page5" class="dot"></label>
+        <label for="page6" class="dot"></label>
+      </div>
+    </div>
+  </body>
+</html>

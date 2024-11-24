@@ -1,0 +1,130 @@
+/* カルーセル全体のスタイル */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* ラジオボタンを非表示 */
+.carousel input[type="radio"] {
+  display: none;
+}
+
+/* カルーセルコンテンツのスタイル */
+.carousel-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* ページのスタイル */
+.page {
+  min-width: 100%;
+  text-align: center;
+}
+
+.page img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ナビゲーションボタンのスタイル */
+.prev-next label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+/* .next {
+  right: 10px;
+} */
+
+/* ドットナビゲーションのスタイル */
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #979696;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ラジオボタンがチェックされた時の状態 */
+#page1:checked ~ .carousel-content { transform: translateX(0); }
+#page2:checked ~ .carousel-content { transform: translateX(-100%); }
+#page3:checked ~ .carousel-content { transform: translateX(-200%); }
+#page4:checked ~ .carousel-content { transform: translateX(-300%); }
+#page5:checked ~ .carousel-content { transform: translateX(-400%); }
+#page6:checked ~ .carousel-content { transform: translateX(-500%); }
+
+/* チェックされたページのドットスタイル */
+#page1:checked ~ .dots label:nth-child(1),
+#page2:checked ~ .dots label:nth-child(2),
+#page3:checked ~ .dots label:nth-child(3),
+#page4:checked ~ .dots label:nth-child(4),
+#page5:checked ~ .dots label:nth-child(5),
+#page6:checked ~ .dots label:nth-child(6) {
+  background: #666;
+}
+
+/* prev-nextボタンの表示制御 */
+/* #page1:checked ~ .prev-next #prev1,
+#page1:checked ~ .prev-next #next1,
+#page2:checked ~ .prev-next #prev2,
+#page2:checked ~ .prev-next #next2,
+#page3:checked ~ .prev-next #prev3,
+#page3:checked ~ .prev-next #next3,
+#page4:checked ~ .prev-next #prev4,
+#page4:checked ~ .prev-next #next4,
+#page5:checked ~ .prev-next #prev5,
+#page5:checked ~ .prev-next #next5,
+#page6:checked ~ .prev-next #prev6,
+#page6:checked ~ .prev-next #next6 {
+  display: block;
+} */
+
+/* prev-nextボタンの表示制御 */
+#page1:checked ~ .prev-next #prev1,
+#page2:checked ~ .prev-next #prev2,
+#page3:checked ~ .prev-next #prev3,
+#page4:checked ~ .prev-next #prev4,
+#page5:checked ~ .prev-next #prev5,
+#page6:checked ~ .prev-next #prev6 {
+  display: block;
+}
+
+.prev-next label {
+  display: none;
+}
+
+/* レスポンシブ対応 */
+@media (min-width: 768px) {
+  .page {
+    min-width: 50%;
+  }
+  
+  #page1:checked ~ .carousel-content { transform: translateX(0); }
+  #page2:checked ~ .carousel-content { transform: translateX(-50%); }
+  #page3:checked ~ .carousel-content { transform: translateX(-100%); }
+  #page4:checked ~ .carousel-content { transform: translateX(-150%); }
+  #page5:checked ~ .carousel-content { transform: translateX(-200%); }
+  #page6:checked ~ .carousel-content { transform: translateX(-250%); }
+}
